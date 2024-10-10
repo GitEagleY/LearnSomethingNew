@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#root{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+/* Body Styles */
+body {
+    background-color: #1f2937;
+    color: #e4e4e7;
+    font-family: "Sono", sans-serif;
+    padding: 48px 64px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+h1.site-title {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: "Teko", system-ui;
+    font-weight: 700;
+    color: #e4e4e7;
+}
+
+/* Form Styles */
+.fact-form {
+    background-color: #0c4a6e;
+    margin-bottom: 40px;
+    padding: 16px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-radius: 16px;
+}
+
+.fact-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.fact-form input,
+.fact-form select {
+    flex: 1 1 200px;
+    /* Maintain width for larger screens */
+    padding: 16px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(82, 82, 91);
+    color: #e4e4e7;
+}
+
+.fact-form span {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: "Teko", system-ui;
+    font-weight: 700;
+    color: #e4e4e7;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+}
+
+.category-aside {
+    margin-right: 40px;
+}
+
+
+.category-button {
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.category-button:hover {
+    background-image: linear-gradient(135deg, #a3e635, #22c55e);
+    transform: scale(1.05);
+}
+
+.fact-section {
+    flex: 1;
+}
+
+.fact-list {
+    list-style: none;
+}
+
+/* Fact Item Styles */
+.fact-item {
+    background-color: rgb(82, 82, 91);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #e4e4e7;
+}
+
+.fact-link {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.fact-link:hover {
+    color: #ef4444;
+    text-decoration: none;
+}
+.fact-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+          
+/* Button Styles */
+button {
+    border: none;
+    border-radius: 100px;
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific Button Styles */
+.post-button {
+    background-color: #4caf50;
+}
+
+.post-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.like-button {
+    background-color: #3b82f6;
+}
+
+.like-button:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+}
+
+.mkay-button {
+    background-color: #fbbf24;
+}
+
+.mkay-button:hover {
+    background-color: #e0a700;
+    transform: scale(1.05);
+}
+
+.false-button {
+    background-color: #ef4444;
+}
+
+.false-button:hover {
+    background-color: #dc2626;
+    transform: scale(1.05);
+}
+
+/* Fact Category Styles */
+.fact-category {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 100px;
+    background-color: #0b8800;
+    display: inline-block;
+}
+
+/* Share Button Styles */
+.share-button {
+    border: none;
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #f97316, #fde047);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.share-button:hover {
+    background-image: linear-gradient(135deg, #a3e635, #22c55e);
+    transform: scale(1.05);
+}
+
+.share-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.fact-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        /* Stack content vertically */
+    }
+
+    .category-aside {
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+        margin-bottom: 20px;
+        /* Add space below aside */
+    }
+
+    .fact-form {
+        padding: 16px;
+        flex-direction: column;
+        /* Stack inputs vertically */
+    }
+
+    .fact-form input,
+    .fact-form select {
+        flex: 1 1 100%;
+        /* Full width for form inputs */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    h1.site-title {
+        font-size: 32px;
+        /* Decrease font size for smaller screens */
+    }
+
+    .fact-text {
+        font-size: 18px;
+        /* Decrease font size */
+    }
+
+    .category-button {
+        font-size: 20px;
+        /* Decrease font size */
+        padding: 8px 16px;
+        /* Decrease padding */
+    }
+
+    button {
+        font-size: 16px;
+        /* Decrease button font size */
+    }
+
+    .share-button {
+        font-size: 24px;
+        /* Decrease font size */
+        padding: 10px 20px;
+        /* Adjust padding */
+    }
+}
+
+
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    /* Remove default padding */
+    display: flex;
+    /* Use flexbox */
+    flex-direction: column;
+    /* Stack buttons vertically */
+    align-items: center;
+    /* Center align items */
+}
+
+.category {
+    width: 100%;
+    /* Make list items full width */
+    text-align: left;
+    /* Center text inside each button */
+}
+
+.main {
+    display: flex;
+    /* Use flexbox for the main layout */
+    justify-content: space-between;
+    /* Space between the category filter and fact list */
+height: 70vh;
+}
+
+.category-aside {
+    margin-right: 40px;
+    /* Space between the category and fact list */
+    width: 200px;
+    /* Set a width for the category filter */
+}
+
+.fact-section {
+    flex: 1;
+    /* Allow the fact section to take the remaining space */
+}
+
+.reactions button {
+    margin-right: 8px;
+    /* Adjust this value as needed */
+}
+
+.fact-info {
+    display: flex;
+    /* Stack items vertically */
+    align-items: flex-start;
+    /* Align items to the left */
+    gap: 4px;
+    /* Optional: Space between items */
+}
+.fact-buttons {
+    display: flex;
+    justify-content: space-between;
+    /* Space between reactions and fact info */
+    align-items: center;
+    /* Center items vertically */
+}
+
+
+.message{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.disputed{
+    color:#dc2626;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+section{
+    overflow: scroll;
+    padding-bottom: 40px;
+}
